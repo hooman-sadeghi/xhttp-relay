@@ -1,5 +1,5 @@
 const { Hono } = require('hono');
-const { serve } = require('hono/node-server');
+const { serve } = require('@hono/node-server'); // اصلاح شده
 const { cors } = require('hono/cors');
 
 const app = new Hono();
