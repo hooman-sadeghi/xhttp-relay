@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XHTTP Relay | ریلی قدرتمند Xray</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+    .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1920/1080') center/cover; }
+    .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="text-white min-h-screen">
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center justify-center text-center px-6">
+    <div class="max-w-4xl mx-auto">
+      <i class="fas fa-bolt text-8xl text-cyan-400 mb-6"></i>
+      <h1 class="text-6xl md:text-7xl font-bold mb-4">XHTTP Relay</h1>
+      <p class="text-3xl text-cyan-300 mb-8">ریلی حرفه‌ای • پایدار • بدون محدودیت</p>
+      <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+        سرور ریلی XHTTP روی Coolify — جایگزین عالی Netlify با عملکرد بهتر و بدون محدودیت اعتبار
+      </p>
+      <div class="mt-10 flex justify-center gap-4">
+        <a href="#features" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold px-10 py-4 rounded-full text-lg transition">
+          مشاهده ویژگی‌ها
+        </a>
+        <a href="https://github.com/hooman-sadeghi/xhttp-relay" target="_blank" 
+           class="border border-white hover:bg-white hover:text-slate-900 font-bold px-8 py-4 rounded-full text-lg transition flex items-center gap-2">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">چرا XHTTP Relay؟</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-2xl card-hover">
+          <i class="fas fa-tachometer-alt text-4xl text-cyan-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">سرعت و پایداری بالا</h3>
+          <p class="text-slate-400">فوروارد مستقیم ترافیک XHTTP با کمترین تأخیر</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl card-hover">
+          <i class="fas fa-shield-alt text-4xl text-cyan-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">امنیت کامل</h3>
+          <p class="text-slate-400">پشتیبانی از TLS + هدر هوشمند x-host</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl card-hover">
+          <i class="fas fa-infinity text-4xl text-cyan-400 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-3">بدون محدودیت</h3>
+          <p class="text-slate-400">برخلاف Netlify، هیچ محدودیتی در ترافیک و تعداد درخواست ندارید</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">نحوه کارکرد</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="w-10 h-10 bg-cyan-500 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0">۱</div>
+              <div>
+                <h3 class="text-xl font-semibold">دامنه Coolify</h3>
+                <p class="text-slate-400">دامنه‌ای که Coolify به شما می‌دهد یا دامنه شخصی خودتان</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="w-10 h-10 bg-cyan-500 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0">۲</div>
+              <div>
+                <h3 class="text-xl font-semibold">ارسال هدر x-host</h3>
+                <p class="text-slate-400">کلاینت شما هدر x-host را با آدرس سرور اصلی ارسال می‌کند</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="w-10 h-10 bg-cyan-500 text-black rounded-full flex items-center justify-center font-bold flex-shrink-0">۳</div>
+              <div>
+                <h3 class="text-xl font-semibold">فوروارد هوشمند</h3>
+                <p class="text-slate-400">ریلی ترافیک را به سرور Xray شما (مثلاً پورت ۴۴۴) منتقل می‌کند</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-950 p-8 rounded-3xl border border-cyan-500/20">
+          <pre class="text-cyan-300 font-mono text-sm overflow-x-auto">
+{
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": { ... },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "xhttpSettings": {
+          "path": "/IR_NETLIFY",
+          "host": "your-relay-domain.com"
+        }
+      }
+    }
+  ]
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center">
+    <p class="text-slate-400">توسعه یافته برای کاربران ایرانی • با ❤️ برای آزادی اینترنت</p>
+    <p class="mt-4">
+      <a href="https://github.com/hooman-sadeghi/xhttp-relay" target="_blank" class="text-cyan-400 hover:underline">
+        github.com/hooman-sadeghi/xhttp-relay
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
