@@ -1,0 +1,16 @@
+{
+  "name": "xhttp-relay",
+  "version": "1.0.0",
+  "description": "HTTP Relay Server - Compatible with Coolify",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "hono": "^4.6.20"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
